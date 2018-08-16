@@ -1,0 +1,81 @@
+.friends-search-container {
+    width: 100%;   
+    background-color: white;
+    padding: 30px;
+}
+
+.friends-search-container .header{
+    color: mediumblue;
+    padding-left: 50px;
+    margin-bottom: 8px;
+}
+
+
+.contact-container .avatar-source,
+.request-container .avatar-source{
+    width: 130px;
+    height: 130px;
+}
+
+
+.contact-container .contact, .request-container .contact{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /* margin: 0 auto; */
+    border-top: 1px solid gainsboro;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.contact-container .contact:last-child, .request-container .contact:last-child{
+    margin-bottom: 40px;
+}
+
+.contact-container .avatar, .request-container .avatar{
+    width: 25%;
+    margin-left: 20px;
+}
+
+.contact-container .inform, .request-container .inform{
+    width: 50%;
+    padding-top:20px;
+}
+.contact-container .addFriend, .request-container .confirmRefuseRequest{
+    width: 30%;
+    padding: 30px;
+}
+
+.contact-container .addFriend button, .confirmButton, .refuseButton{
+    width: 120px;
+    background-color: mediumblue;
+    color: white;
+    border: 0;
+    padding: 4px;
+    border-radius: 3px;
+}
+
+.confirmButton{
+    margin-bottom: 10px;
+}
+.contact-container .inform p.name, .request-container .inform p.name{
+    color: midnightblue;
+    font-size: 18px;
+}
+
+.search-container {
+    width: 50%;
+}
+
+button.viewRequest{
+    background-color: white;
+    border:none;
+    outline: none;
+    margin-left: 50px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+button.viewRequest:hover{
+    background-color: #e0ebeb;
+}

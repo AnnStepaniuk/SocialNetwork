@@ -1,0 +1,99 @@
+#register-form {
+    margin: 20px auto;
+    width: 100%;
+}
+
+    #register-form form {
+        background: #fff;
+        border-radius: 0 0 5px 5px;
+        padding: 20px;
+        position: relative;
+    }
+
+    #register-form input {
+        font-size: 14px;
+        display: inline-block;
+        width: 100px;
+        border: 1px solid #dcdcdc;
+        padding: 9px 10px;
+        border-radius: 3px 3px 3px 3px;
+        outline:none;
+    }
+
+
+    #register-form label {
+        text-align: left;
+        width: 80px;
+        display: inline-block;
+        margin-right: 20px;
+        margin-bottom: 0;
+        vertical-align: middle;
+    }
+
+   
+#register-form input[type="email"],
+#register-form input[type="password"],
+#register-form input[type="text"]{
+    min-width: 390px;
+}
+
+
+    #register-form input[type="submit"] {
+        background: #1dabb8;
+        border-radius: 3px;
+        color: #fff;
+        float: right;
+        font-weight: bold;
+        margin-top: 20px;
+        padding: 12px 20px;
+    }
+
+        #register-form input[type="submit"]:hover {
+            background: #198d98;
+        } 
+
+    #register-form .form-group  span{
+       display: block;
+       padding-top: 5px;
+       margin-left: 100px;
+    }
+
+    #register-form input.ng-valid[required], #register-form input.ng-valid.required,
+    #register-form select.ng-valid[required], #register-form select.ng-valid.required  {
+        border: green 1px solid;
+    }
+
+#register-form input.ng-invalid,  #register-form select.ng-invalid {
+    border: 1px red solid;
+    /* box-shadow:0 0 10px red;  */
+}
+
+input.ng-valid[required]:focus, input.ng-valid.required :focus,
+select.ng-valid[required]:focus, select.ng-valid.required :focus {
+    box-shadow:0 0 10px green; 
+}
+#register-form input.ng-invalid:focus, 
+#register-form select.ng-invalid:focus {
+    box-shadow:0 0 10px red;    
+}
+
+#register-form .birthday {
+    width: 250px;
+    height: 40px;
+    display: inline-block;
+}
+
+#register-form .birthday select{
+    font-size: 15px;
+    height: 40px;
+    padding: 5px;
+    margin-right: 2px;
+    outline:none;
+    /* border: green 1px solid; */
+}
+
+#register-form .birthday span {
+   
+    height: 40px;
+    margin: 0;
+}

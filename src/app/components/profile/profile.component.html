@@ -1,0 +1,41 @@
+<form #editForm="ngForm" (ngSubmit)="OnEditSubmit(editForm, authorizedUser.UserId)" class="editingForm" *ngIf="authorizedUser">
+  <div class="personalInfo" >
+    <img [src]="imageUrl" #Image style="width: 160px; height: 160px;">
+    <div class="personalInfo-content">
+      <p class="name">
+        <span>Name</span> : {{authorizedUser.FirstName}} {{authorizedUser.LastName}}</p>
+      <p>
+        <span>Email</span> : {{authorizedUser.Email}}</p>
+      <p>
+        <span>Birthday</span> : {{authorizedUser.Birthday}}</p>
+      <p *ngIf="authorizedUser.City">
+        <span>City</span> : {{authorizedUser.City}}</p>
+      <p *ngIf="!authorizedUser.City">
+        <span>City</span> : Unknown</p>
+    </div>
+  </div>
+  <div class="edit">
+    <div class="form-group">
+      <input type="button" value="Upload avatar" onclick="document.getElementById('fileUpload').click();" />
+      <input visibility="hidden" style="display:none;" type="file" id="fileUpload" #Image [ngModelOptions]="{standalone: true}"
+        ngModel accept="image/*" (change)="handleFileInput($event.target.files)">
+    </div>
+
+    <div class="form-group">
+      <label for="fName">First Name</label>
+      <input type="text" #FirstName ngModel [ngModelOptions]="{standalone: true}" name="FirstName">
+      <span class="fa fa-edit iconEdit"></span>
+    </div>
+    <div class="form-group">
+      <label for="lName">Last Name</label>
+      <input type="text" id="lName" name="LastName" #LastName ngModel [ngModelOptions]="{standalone: true}">
+      <span class="fa fa-edit iconEdit"></span>
+    </div>
+    <div class="form-group">
+      <label for="city">City</label>
+      <input type="text" id="city" ngModel #City name="City">
+      <span class="fa fa-edit iconEdit"></span>
+    </div>
+    <button type="submit">Save Changes</button>
+  </div>
+</form>

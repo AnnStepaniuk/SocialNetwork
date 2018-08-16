@@ -1,0 +1,65 @@
+.friend-container {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding: 30px;
+}
+
+.friend-container .header{
+    color: mediumblue;
+    padding-left: 50px;
+    margin-bottom: 20px;
+}
+
+.friend-container .friend {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border: 1px solid gainsboro;
+    padding: 15px;
+    padding-bottom: 15px;
+}
+
+.friend-container .avatar {
+    width: 25%;
+}
+
+.friend-container .inform {
+    width: 45%;
+    display: flex;   
+    flex-direction: column;
+    justify-content: center;
+}
+
+.friend-container .message {
+    width: 30%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.friend-container .avatar-source{
+    width: 130px;
+    height: 130px;
+}
+
+.friend-container .inform p.name {
+    color: midnightblue;
+    font-size: 18px;
+}
+
+.friend-container .message button
+{
+    width: 120px;
+    background-color: mediumblue;
+    color: white;
+    border: 0;
+    padding: 4px;
+}
+
+
+.modal .modal-body textarea.areaMessage {
+    resize: none;
+    height: 200px;
+}

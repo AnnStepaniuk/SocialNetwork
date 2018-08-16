@@ -1,0 +1,46 @@
+<nav class="navbar">
+  <div class="nav-wrapper">
+    <a href="" class="brand-logo">
+      <span class="social">Social</span>
+      <span class="net">Net</span>
+    </a>
+    
+    <ul class="nav">
+      <li>
+          <img [src]="imageUrl">
+          <a routerLink="/profile" routerLinkActive='active'  *ngIf="userInform">  {{userInform.FirstName}} {{userInform.LastName}}</a>
+      </li>
+      <li>         
+        <a (click)="Logout()">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="body">
+  <div class="menu">
+    <ul>
+      <li>
+        <img [src]="imageUrl">
+        <a routerLink="/profile" routerLinkActive='active' >Profile</a>
+      </li>
+      <li>
+          <img src="/assets/img/friends.png" >
+        <a routerLink="/friends" routerLinkActive='active'>Friends</a>
+      </li>
+      <li>
+          <img src="/assets/img/findFriends.png" >
+        <a routerLink="/friendsSearch" routerLinkActive='active'>Search friends</a>
+      </li>
+      <li>
+          <img src="/assets/img/chat.png">
+        <a routerLink="/messages" routerLinkActive='active'>History message</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="content" *ngIf="userInform">
+    <div style="width: 100%;">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

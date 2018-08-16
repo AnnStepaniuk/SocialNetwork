@@ -1,0 +1,60 @@
+<div class="friends-search-container">
+  <!-- <form >
+  </form> -->
+  
+  <div class="request-container">
+    <h5 class="header">
+      <i class="fas fa-user-friends"></i> Friend Requests</h5>
+      <button class="viewRequest" id="viewSent" (click)="ClickOnViewSent()" >View sent requests</button>
+      <button class="viewRequest" id="viewReceived" (click)="ClickOnViewReceived()"  >View received requests</button>
+    <div *ngFor="let receivedRequest of receivedRequests" class="contact">
+      <div class="avatar">
+        <img src="/assets/img/default-user.png" alt="avatar" class="avatar-source" >
+      </div>
+      <div class="inform">
+        <p class="name">{{receivedRequest.Sender.FirstName}} {{receivedRequest.Sender.LastName}}</p>
+      </div>
+      <div class="confirmRefuseRequest">
+        <button class="confirmButton" (click)="ConfirmRequest(receivedRequest)"><i class="fas fa-check"></i>  Confirm</button>
+        <button class="refuseButton" (click)="RemoveRequest(receivedRequest)"><i class="fas fa-ban"></i>  Refuse</button>
+      </div>
+    </div>
+    <div *ngFor="let sentRequest of sentRequests" class="contact">
+        <div class="avatar">
+          <img src="/assets/img/default-user.png" alt="avatar" class="avatar-source">
+        </div>
+        <div class="inform">
+          <p class="name">{{sentRequest.Receiver.FirstName}} {{sentRequest.Receiver.LastName}}</p>
+        </div>
+        <div class="confirmRefuseRequest">
+          <button class="confirmButton" (click)="ConfirmRequest(request)"><i class="fas fa-trash-alt"></i>  Delete</button>
+        </div>
+      </div>
+  </div>
+  <div class="contact-container">
+    <h5 class="header">
+      <i class="fas fa-user-friends"></i> Find Friends</h5>
+    <div *ngFor="let user of users" class="contact">
+      <div class="avatar">
+        <img src="/assets/img/default-user.png" alt="avatar" class="avatar-source">
+      </div>
+      <div class="inform">
+        <p class="name">{{user.FirstName}} {{user.LastName}}</p>
+        <p *ngIf="user.City">{{user.City}}</p>
+        <p *ngIf="user.Birthday">{{user.Birthday}}</p>
+      </div>
+      <div class="addFriend">
+        <button (click)="AddFriend(user)">
+          <i class="fa fa-user-plus"></i> Add Friend</button>
+      </div>
+    </div>
+    <div infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="3000" (scrolled)="onScroll()"></div>
+  </div>
+
+</div>
+<div class="notification is-warning" *ngIf="finished">
+    End of database. That's all users
+  </div>
+<!-- <div class="search-container">
+
+  </div> -->

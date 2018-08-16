@@ -1,0 +1,85 @@
+
+form {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+
+form input[type="text"]{
+    display: inline-block;
+    width: 220px;
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    padding: 5px 10px;
+    box-sizing: border-box;
+    color: black;
+    
+}
+
+form input[type="file"]{   
+    width: 100px;
+}
+
+form label{
+    text-align: left;
+    width: 80px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+form .edit{
+    width:60%;
+    margin-left: 80px;
+    margin-top: 30px;
+}
+
+form .personalInfo{
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 40%;  
+}
+
+.btn{
+    background-color: DodgerBlue; /* Blue background */
+    border: none; /* Remove borders */
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    cursor: pointer; /* Mouse pointer on hover */
+    height: 36px;
+    font-size: 24px; /* Set a font size */
+    width: 36px;   
+}
+
+span.iconEdit{
+    position: absolute;
+    right: 35px; 
+    background-color: DodgerBlue; /* Blue background */
+    border: none; /* Remove borders */
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    height: 36px;
+    font-size: 27px; /* Set a font size */
+    width: 36px;
+    color: white;
+    cursor: none;
+}
+
+.fa-edit:before, .fa-pencil-square-o:before {
+    position: absolute;
+    right: 3px;
+    top: 4px;
+}
+
+.personalInfo-content {
+    padding: 20px;
+}
+.personalInfo-content p {
+    margin-bottom: 5px;
+}
+
+.personalInfo-content p span{
+
+}
