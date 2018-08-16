@@ -1,0 +1,176 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+a {
+    color: #999;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #1dabb8;
+    }
+
+fieldset {
+    border: none;
+    margin: 0;
+}
+
+    input[type="submit"] {
+        cursor: pointer;
+    }
+
+.clearfix {
+    *zoom: 1;
+}
+
+    .clearfix:before, .clearfix:after {
+        content: "";
+        display: table;
+    }
+
+    .clearfix:after {
+        clear: both;
+    }
+
+/* ---------- LOGIN-FORM ---------- */
+
+#login-form {
+    margin: 150px auto;
+    width: 500px;
+}
+
+#register-form {
+    margin: 150px auto;
+    width: 550px;
+}
+
+    #login-form h1, #register-form h1 {
+        background-color: #282830;
+        border-radius: 5px 5px 0 0;
+        color: #fff;
+        font-size: 14px;
+        padding: 20px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    #login-form form, #register-form form {
+        background: #fff;
+        border-radius: 0 0 5px 5px;
+        padding: 20px;
+        position: relative;
+    }
+
+    #login-form input, #register-form input {
+        font-size: 14px;
+    }
+
+    #register-form input {
+        display: inline-block;
+    }
+
+    #register-form label {
+        width: 100px;
+    }
+
+
+#login-form input[type="email"],
+#login-form input[type="password"] {
+    border: 1px solid #dcdcdc;
+    padding: 12px 10px;
+    min-width: 460px;
+}
+
+#register-form input[type="email"],
+#register-form input[type="password"],
+#register-form input[type="text"] {
+    min-width: 400px;
+}
+
+#login-form input[type="email"] {
+    border-radius: 3px 3px 0 0;
+}
+
+#login-form input[type="password"] {
+    border-top: none;
+    border-radius: 0px 0px 3px 3px;
+}
+
+#register-form input {
+    border: 1px solid #dcdcdc;
+    padding: 12px 10px;
+    border-radius: 3px 3px 3px 3px;
+}
+
+    #login-form input[type="submit"], #register-form input[type="submit"] {
+        background: #1dabb8;
+        border-radius: 3px;
+        color: #fff;
+        float: right;
+        font-weight: bold;
+        margin-top: 20px;
+        padding: 12px 20px;
+    }
+
+        #login-form input[type="submit"]:hover, #register-form input[type="submit"]:hover {
+            background: #198d98;
+        }
+
+.mainMenu {
+    list-style: none;
+    background-color: #484f61;
+    width: 400px;
+    border: 1px solid #2a323f;
+    border-bottom: none;
+    color: #fff;
+}
+
+    .mainMenu li {
+        border-bottom: 1px solid #2a323f;
+        position: relative;
+    }
+
+        .mainMenu li:hover {
+            background-color: #2a323f;
+        }
+
+            .mainMenu li:hover ul {
+                display: block;
+            }
+
+                .mainMenu li:hover ul li ul {
+                    display: none;
+                }
+
+        .mainMenu li a {
+            color: #fff;
+            padding: 10px 35px;
+            display: block;
+            text-decoration: none;
+            font-weight: bold;
+
+        }
+
+            .mainMenu li a:hover {
+                background-color: #5d99cf;
+                color: #fff;
+            }
+
+        .mainMenu li ul li:hover ul {
+            display: block;
+        }
+
+        .mainMenu li ul {
+            position: absolute;
+            left: 200px;
+            top: 0px;
+            display: none;
+        }
